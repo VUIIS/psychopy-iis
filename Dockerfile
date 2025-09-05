@@ -14,7 +14,7 @@ RUN apt update -y && \
 
 ENV LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libffi.so.7
 
-COPY psychopy-tools /opt
+COPY psychopy-tools /opt/psychopy-tools/
 
 ENV PATH=/opt/psychopy-tools:${PATH}
 
