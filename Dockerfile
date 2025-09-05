@@ -1,3 +1,8 @@
+# Everything has to line up dependency-wise - psychopy is very picky
+#   Debian bullseye to get libffi7
+#   Python 3.10 for psychopy 2024.1.4
+#   psychopy 2024.1.4 for psydat files created by 2024.1.4, 2024.1.5
+
 FROM python:3.10-bullseye
 
 RUN apt update -y && \
