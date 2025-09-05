@@ -5,6 +5,6 @@ RUN apt update -y && \
 	pip install --upgrade pip && \
 	pip install psychopy==2024.1.4
 
-ENV LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libffi.so.7
+ENV LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libffi.so.8
 
 
