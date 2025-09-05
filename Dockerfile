@@ -1,7 +1,7 @@
-FROM python:3.10.16
+FROM python:3.10-bullseye
 
 RUN apt update -y && \
-	apt install -y libgtk-3-dev libffi7 && \
+	apt install -y libgtk-3-dev && \
 	pip install --upgrade pip && \
 	pip install psychopy==2024.1.4
 
