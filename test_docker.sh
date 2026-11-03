@@ -5,7 +5,7 @@ podman run \
     --mount type=bind,src=`pwd -P`/INPUTS,dst=/INPUTS \
 	--mount type=bind,src=`pwd -P`/OUTPUTS,dst=/OUTPUTS \
     baxterprogers/psychopy-iis:test \
-	convert-psydat.py \
+	convert-psydat-rngsafe.py \
 	--psydat_file /INPUTS/ert1.psydat \
 	--out_file /OUTPUTS/ert1.csv
 
