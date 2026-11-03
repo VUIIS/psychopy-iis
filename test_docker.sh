@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Full run
-docker run \
+podman run \
     --mount type=bind,src=`pwd -P`/INPUTS,dst=/INPUTS \
 	--mount type=bind,src=`pwd -P`/OUTPUTS,dst=/OUTPUTS \
     baxterprogers/psychopy-iis:test \
@@ -12,7 +12,7 @@ docker run \
 exit 0
 
 # Command line
-docker run -it --entrypoint bash \
+podman run -it --entrypoint bash \
     --mount type=bind,src=`pwd -P`/INPUTS,dst=/INPUTS \
 	--mount type=bind,src=`pwd -P`/OUTPUTS,dst=/OUTPUTS \
 	--mount type=bind,src=`pwd -P`/..,dst=/wkdir \
