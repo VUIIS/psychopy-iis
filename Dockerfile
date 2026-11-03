@@ -7,10 +7,13 @@
 
 FROM python:3.10.16-bullseye
 
-RUN apt update -y && \
-	apt install -y libgtk-3-dev && \
-	pip install --upgrade pip && \
-	pip install psychopy==2024.2.4
+RUN set -eux; \
+  rm -rf /var/lib/apt/lists/*; \
+  apt-get -o Acquire::Retries=5 update; \
+  apt-get install -y --no-install-recommends libgtk-3-dev; \
+  rm -rf /var/lib/apt/lists/*; \
+  pip install --upgrade pip; \
+  pip install psychopy==2024.2.4
 
 ENV LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libffi.so.7
 
